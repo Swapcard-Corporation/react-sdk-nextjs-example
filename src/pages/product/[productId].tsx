@@ -1,4 +1,4 @@
-import ProductEventDetails from "@swapcard/react-sdk/lib/product/event-details";
+import { ProductEventDetails } from "@swapcard/react-sdk/lib/product/event-details";
 import { useRouter } from "next/router";
 
 function Product() {

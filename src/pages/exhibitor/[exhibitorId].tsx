@@ -1,4 +1,4 @@
-import ExhibitorEventDetails from "@swapcard/react-sdk/lib/exhibitor/event-details";
+import { ExhibitorEventDetails } from "@swapcard/react-sdk/lib/exhibitor/event-details";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
