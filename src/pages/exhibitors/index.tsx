@@ -1,6 +1,6 @@
 import {
   ExhibitorEventListView,
-  getEventExhibitorListViewData,
+  getExhibitorEventListView,
 } from "@swapcard/react-sdk/lib/exhibitor/event-list-view";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ function Exhibitors() {
 
 Exhibitors.getInitialProps = async (ctx: any) => {
   if (typeof window === "undefined") {
-    await getEventExhibitorListViewData(ctx.client, {
+    await getExhibitorEventListView(ctx.client, {
       eventId: process.env.NEXT_PUBLIC_EVENT_ID,
       viewId: process.env.NEXT_PUBLIC_EXHIBITOR_VIEW_ID,
     });
