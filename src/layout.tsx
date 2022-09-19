@@ -16,14 +16,23 @@ const Reset = createGlobalStyle`
 `;
 
 const TopBarWrapper = styled.div`
-  background-color: #088896;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #142e31;
   color: white;
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: 30px;
+  padding: 15px 30px;
   align-items: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  margin-bottom: 30px;
+  z-index: 200;
+`;
+
+const Content = styled.div`
+  position: relative;
+  top: 58px;
 `;
 
 const Nav = styled.div`
@@ -37,12 +46,6 @@ const Nav = styled.div`
 
 const Title = styled.h3`
   font-size: 20px;
-`;
-
-const Content = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  min-height: calc(100vh - 230px);
 `;
 
 const Footer = styled.footer`
