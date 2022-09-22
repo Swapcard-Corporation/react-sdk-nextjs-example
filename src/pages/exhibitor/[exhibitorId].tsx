@@ -5,15 +5,17 @@ import { useRouter } from "next/router";
 function Exhibitor() {
   const router = useRouter();
   return (
-    <ExhibitorEventDetails
-      exhibitorId={router.query.exhibitorId}
-      stickyOffset={15}
-      renderProductCard={(node, product) => (
-        <Link href={`/product/${product.id}`}>
-          <a>{node}</a>
-        </Link>
-      )}
-    />
+    <div style={{ marginTop: 100 }}>
+      <ExhibitorEventDetails
+        exhibitorId={router.query.exhibitorId}
+        stickyOffset={84}
+        renderProductCard={(node, product) => (
+          <Link href={`/product/${product.id}`}>
+            <a>{node}</a>
+          </Link>
+        )}
+      />
+    </div>
   );
 }
 
