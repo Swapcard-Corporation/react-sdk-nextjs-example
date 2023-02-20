@@ -4,7 +4,7 @@ import reset from "styled-reset";
 import Link from "next/link";
 import { Cover } from "./ui/cover";
 
-const Reset = createGlobalStyle`
+const Reset: any = createGlobalStyle`
     ${reset}
     body {
       overflow-x: hidden;
