@@ -1,14 +1,15 @@
 import {
-  ExhibitorEventListView,
-  getExhibitorEventListView,
-} from "@swapcard/react-sdk/lib/exhibitor/event-list-view";
+  PlanningEventListView,
+  getPlanningEventListView,
+} from "@swapcard/react-sdk/lib/planning/event-list-view";
 import Link from "next/link";
 import { useState } from "react";
 import { Cover } from "../../ui/cover";
 
-function Exhibitors() {
+function Agenda() {
   const [search, setSearch] = useState();
   const [filters, setFilters] = useState();
+  const [aggregationId, setAggregationId] = useState();
   return (
     <>
       <Cover
@@ -16,30 +17,31 @@ function Exhibitors() {
         height="40vh"
         style={{ margin: "68px 0 30px 9px", width: "calc(100% - 24px)" }}
       />
-      <ExhibitorEventListView
-        viewId={process.env.NEXT_PUBLIC_EXHIBITOR_VIEW_ID}
+      <PlanningEventListView
+        viewId={process.env.NEXT_PUBLIC_PLANNING_VIEW_ID}
         stickyOffset={84}
         search={search}
         onSearch={setSearch}
         selectedFilters={filters}
         onFilter={setFilters}
-        renderExhibitorCard={(node, exhibitor) => (
-          <Link href={`/exhibitor/${exhibitor.id}`}>{node}</Link>
+        aggregationId={aggregationId}
+        onChangeAggregationId={setAggregationId}
+        renderPlanningCard={(node, planning) => (
+          <Link href={`/planning/${planning.id}`}>{node}</Link>
         )}
       />
     </>
   );
 }
 
-Exhibitors.getInitialProps = async (ctx: any) => {
+Agenda.getInitialProps = async (ctx: any) => {
   if (typeof window === "undefined") {
-    await getExhibitorEventListView(ctx.client, {
-      eventId: process.env.NEXT_PUBLIC_EVENT_ID,
-      viewId: process.env.NEXT_PUBLIC_EXHIBITOR_VIEW_ID,
+    await getPlanningEventListView(ctx.client, {
+      viewId: process.env.NEXT_PUBLIC_PLANNING_VIEW_ID,
     });
   }
 
   return {};
 };
 
-export default Exhibitors;
+export default Agenda;

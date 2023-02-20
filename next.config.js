@@ -5,5 +5,5 @@ module.exports = {
       ssr: true,
     },
   },
-  reactStrictMode: true,
+  reactStrictMode: false,
 };

@@ -147,22 +147,19 @@ function TopBar() {
   return (
     <TopBarWrapper>
       <Link href="/">
-        <a>
-          <Title>{`Fashion Trend'Show 2.0`}</Title>
-        </a>
+        <Title>{`Fashion Trend'Show 2.0`}</Title>
       </Link>
 
       <Nav>
         <ul>
           <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/exhibitors">
-              <a>Exhibitors & Brands</a>
-            </Link>
+            <Link href="/exhibitors">Exhibitors & Brands</Link>
+          </li>
+          <li>
+            <Link href="/plannings">Agenda</Link>
           </li>
           <li>Contact</li>
         </ul>

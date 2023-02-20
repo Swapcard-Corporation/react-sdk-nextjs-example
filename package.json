@@ -9,20 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@swapcard/react-sdk": "^2.0.33",
-    "next": "12.2.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "^5.3.3",
+    "@swapcard/react-sdk": "^2.2.14",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6",
     "styled-reset": "4.4.1"
   },
-  "resolutions": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
   "devDependencies": {
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.5",

@@ -10,9 +10,10 @@ function Exhibitor() {
         exhibitorId={router.query.exhibitorId}
         stickyOffset={84}
         renderProductCard={(node, product) => (
-          <Link href={`/product/${product.id}`}>
-            <a>{node}</a>
-          </Link>
+          <Link href={`/product/${product.id}`}>{node}</Link>
+        )}
+        renderPlanningCard={(node, planning) => (
+          <Link href={`/planning/${planning.id}`}>{node}</Link>
         )}
       />
     </div>

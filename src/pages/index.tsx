@@ -94,9 +94,7 @@ function Home() {
             }}
           >
             <Link href="/exhibitors">
-              <a>
-                <Button>Discover our brands</Button>
-              </a>
+              <Button>Discover our brands</Button>
             </Link>
           </Cover>
         </div>

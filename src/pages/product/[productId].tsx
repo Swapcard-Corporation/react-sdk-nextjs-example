@@ -9,9 +9,7 @@ function Product() {
       productId={router.query.productId}
       stickyOffset={84}
       renderExhibitorCard={(node, exhibitor) => (
-        <Link href={`/exhibitor/${exhibitor.id}`}>
-          <a>{node}</a>
-        </Link>
+        <Link href={`/exhibitor/${exhibitor.id}`}>{node}</Link>
       )}
     />
   );
