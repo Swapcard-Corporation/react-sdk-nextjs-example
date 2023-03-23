@@ -161,6 +161,9 @@ function TopBar() {
           <li>
             <Link href="/plannings">Agenda</Link>
           </li>
+          <li>
+            <Link href="/products">Products</Link>
+          </li>
           <li>Contact</li>
         </ul>
       </Nav>
