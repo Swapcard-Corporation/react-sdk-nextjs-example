@@ -15,6 +15,9 @@ function Exhibitor() {
         renderPlanningCard={(node, planning) => (
           <Link href={`/planning/${planning.id}`}>{node}</Link>
         )}
+        onClickOnBookmarkButton={() =>
+          window.open("https://swapcard.com", "_blank")
+        }
       />
     </div>
   );

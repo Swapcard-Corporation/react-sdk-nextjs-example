@@ -12,6 +12,9 @@ function Product() {
         renderExhibitorCard={(node, exhibitor) => (
           <Link href={`/exhibitor/${exhibitor.id}`}>{node}</Link>
         )}
+        onClickOnBookmarkButton={() =>
+          window.open("https://swapcard.com", "_blank")
+        }
       />
     </div>
   );

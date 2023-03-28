@@ -24,7 +24,25 @@ function MyEventWebsiteApp({
 
   return (
     <ClientProvider client={client}>
-      <ApplicationProvider initialScreenWidth={initialScreenWidth}>
+      <ApplicationProvider
+        initialScreenWidth={initialScreenWidth}
+        theme={{
+          radius: {
+            sm: "0px",
+            md: "0px",
+            lg: "0px",
+            xl: "0px",
+            xxl: "0px",
+          },
+          colors: {
+            textSecondary: "#000000",
+            borders: "#ffcdcd",
+            dividers: "#ffcdcd",
+            title: "#861515",
+            actionsSecondary: "#861515",
+          },
+        }}
+      >
         <EventProvider eventId={process.env.NEXT_PUBLIC_EVENT_ID}>
           <Layout>
             <Component {...pageProps} />
