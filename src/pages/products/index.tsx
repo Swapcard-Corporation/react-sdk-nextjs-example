@@ -22,6 +22,7 @@ function Products() {
       mobileFiltersMode="SWIPE_BOTTOM_MODAL"
       onSearch={setSearch}
       onFilter={setFilters}
+      paginationMode="BUTTON"
       renderHead={({ name }) => (
         <Head>
           <title>{name}</title>
