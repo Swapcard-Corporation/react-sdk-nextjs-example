@@ -1,104 +1,180 @@
-import Link from "next/link";
 import styled from "styled-components";
-import { Button } from "../ui/button";
-import { Cover } from "../ui/cover";
+import { poppins } from "@/ui/fonts";
+import { colors } from "@/ui/colors";
+import { H3, Paragraph } from "@/ui/typography";
+import Button from "@/ui/button";
+import Img from "next/image";
+import Head from "next/head";
+import Link from "next/link";
 
 const Baseline = styled.div`
-  position: absolute;
-  bottom: -90px;
-  left: 0;
-  right: 0;
+  margin-top: 160px;
   text-align: center;
-  max-width: 750px;
-  margin: 0 auto;
+  margin-bottom: 120px;
 `;
 
 const Title = styled.h1`
-  font-size: 60px;
-  line-height: 80px;
-  font-weight: 900;
-  margin-bottom: 40px;
-  color: white;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  font-size: 96px;
+  line-height: 115%;
+  color: ${colors.main[100]};
+  font-weight: 400;
+  margin-bottom: 32px;
+
+  strong {
+    display: block;
+    font-weight: 700;
+  }
 `;
 
-const Description = styled.h3`
-  font-size: 25px;
-  line-height: 35px;
-  opacity: 0.7;
+const Dates = styled.h3`
+  font-size: 14px;
+  line-height: 150%;
 `;
 
-const Section = styled.div`
-  height: calc(100vh - 68px);
+const Content = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
 `;
 
-const Info = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: #eeeeee;
-  height: calc(100vh - 120px);
-  margin: 0 15px;
-`;
-
-const Text = styled.div`
-  padding: 0 10%;
-  font-size: 16px;
-  line-height: 30px;
+const Grid = styled.div`
   display: flex;
+  gap: 64px;
   align-items: center;
-  height: 100%;
+  margin-bottom: 80px;
 `;
+
+function Schedule() {
+  return (
+    <Grid>
+      <Img src="/img-01.jpg" alt="" width={650} height={365} />
+      <div>
+        <H3>
+          <Img
+            src="/icons/schedule.svg"
+            width={20}
+            height={20}
+            alt=""
+            style={{ position: "relative", top: 2, marginRight: 18 }}
+          />
+          Schedule
+        </H3>
+        <Paragraph>
+          Experience the excitement and glamour of the fashion world with FT’S!
+          Featuring top designers and stunning models, the schedule promises an
+          unforgettable showcase of the latest trends and styles. From backstage
+          preparations to the electrifying runway presentation, join us for an
+          immersive and exhilarating experience that will leave you in awe.
+        </Paragraph>
+        <Link href="/plannings">
+          <Button>Discover the schedule</Button>
+        </Link>
+      </div>
+    </Grid>
+  );
+}
+
+function Brands() {
+  return (
+    <Grid>
+      <div>
+        <H3>
+          <Img
+            src="/icons/brands.svg"
+            width={20}
+            height={20}
+            alt=""
+            style={{ position: "relative", top: 2, marginRight: 18 }}
+          />
+          Brands
+        </H3>
+        <Paragraph>
+          FT’S has produced a runway that celebrates multiculturalism and
+          emerging talent. We strive to identify undiscovered designers by
+          providing an accessible and widely reputable platform. Through
+          international media coverage and cogent buyer connectivity, FT’S has
+          provided the exposure to project designers into the next stages of
+          success.
+        </Paragraph>
+        <Link href="/exhibitors">
+          <Button>Explore the list of brands</Button>
+        </Link>
+      </div>
+      <Img src="/img-02.jpg" alt="" width={650} height={365} />
+    </Grid>
+  );
+}
+
+const Center = styled.div`
+  text-align: center;
+`;
+
+function Speakers() {
+  return (
+    <Center>
+      <H3>
+        <Img
+          src="/icons/speaker.svg"
+          width={24}
+          height={24}
+          alt=""
+          style={{ position: "relative", top: 5, marginRight: 18 }}
+        />
+        Speakers
+      </H3>
+      <Paragraph>
+        From designers and stylists to sustainability experts and social
+        influencers, our diverse and dynamic speakers will provide a wealth of
+        knowledge & inspiration.
+      </Paragraph>
+    </Center>
+  );
+}
+
+function Showroom() {
+  return (
+    <Center>
+      <H3>
+        <Img
+          src="/icons/showroom.svg"
+          width={24}
+          height={24}
+          alt=""
+          style={{ position: "relative", top: 5, marginRight: 18 }}
+        />
+        Showroom
+      </H3>
+      <Paragraph>
+        Be the first to witness the unveiling of the hottest new pieces in
+        fashion! FT’S will showcase the latest trends and styles, featuring
+        innovative designs and stunning collections that will leave you
+        breathless.
+      </Paragraph>
+    </Center>
+  );
+}
 
 function Home() {
   return (
     <>
-      <Section>
-        <Cover
-          url="https://cdn-api.swapcard.com/public/images/7a96308dc77340979ed5ea48d357bc4e.gif"
-          style={{
-            margin: "68px 15px 15px 15px",
-            width: "calc(100% - 30px)",
-          }}
-          height="calc(100vh - 185px)"
-        >
-          <Baseline>
-            <Title>{`Fashion Trend'Show 2.0`}</Title>
-            <Description>
-              The event that brings together creators and designers to display
-              their new products for the winter 2022 season.
-            </Description>
-          </Baseline>
-        </Cover>
-      </Section>
+      <Head>
+        <title>{`Fashion Trend'Show`}</title>
+      </Head>
+      <Baseline>
+        <Title>
+          <strong>Fashion</strong>
+          {`Trend'Show`}
+        </Title>
+        <Dates className={poppins.className}>
+          Thursday, March 3, 2024 from 5:00 PM to 9:00 PM.
+        </Dates>
+      </Baseline>
 
-      <Info>
-        <div>
-          <Text>
-            {`Welcome to the Fashion Trend'show 2.0., the event that brings together
-          creators and designers to display their new products for the winter
-          2022 season . Both a place for exchange and business, this new kind of
-          show puts collective intelligence in the spotlight. Flag bearer of a
-          responsible industry, the Fashion Trend'show advocates strong values:
-          Humanity, Sustainability and Adaptability.`}
-          </Text>
-        </div>
-
-        <div>
-          <Cover
-            url="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
-            height="100%"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Link href="/exhibitors">
-              <Button>Discover our brands</Button>
-            </Link>
-          </Cover>
-        </div>
-      </Info>
+      <Content>
+        <Schedule />
+        <Brands />
+        <Speakers />
+        <Showroom />
+      </Content>
     </>
   );
 }

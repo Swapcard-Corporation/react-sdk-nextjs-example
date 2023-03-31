@@ -13,6 +13,9 @@ import {
 import { EventProvider, getEvent } from "@swapcard/react-sdk/lib/event";
 
 import Layout from "../layout";
+import { colors } from "@/ui/colors";
+import { playFairDisplay } from "@/ui/fonts";
+import Head from "next/head";
 
 function MyEventWebsiteApp({
   Component,
@@ -23,33 +26,59 @@ function MyEventWebsiteApp({
   const client = initClient({ initialState });
 
   return (
-    <ClientProvider client={client}>
-      <ApplicationProvider
-        initialScreenWidth={initialScreenWidth}
-        theme={{
-          radius: {
-            sm: "0px",
-            md: "0px",
-            lg: "0px",
-            xl: "0px",
-            xxl: "0px",
-          },
-          colors: {
-            textSecondary: "#000000",
-            borders: "#ffcdcd",
-            dividers: "#ffcdcd",
-            title: "#861515",
-            actionsSecondary: "#861515",
-          },
-        }}
-      >
-        <EventProvider eventId={process.env.NEXT_PUBLIC_EVENT_ID}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </EventProvider>
-      </ApplicationProvider>
-    </ClientProvider>
+    <main className={playFairDisplay.className}>
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/safari-pinned-tab.svg"
+          color={colors.main[100]}
+        />
+        <meta name="msapplication-TileColor" content={colors.text} />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
+      <ClientProvider client={client}>
+        <ApplicationProvider
+          initialScreenWidth={initialScreenWidth}
+          disableResetCSS
+          theme={{
+            radius: {
+              md: "16px",
+            },
+            colors: {
+              textSecondary: colors.text,
+              borders: colors.main[30],
+              dividers: "transparent",
+              title: colors.main[100],
+              actionsSecondary: colors.main[70],
+            },
+          }}
+        >
+          <EventProvider eventId={process.env.NEXT_PUBLIC_EVENT_ID}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </EventProvider>
+        </ApplicationProvider>
+      </ClientProvider>
+    </main>
   );
 }
 
