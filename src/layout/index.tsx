@@ -20,31 +20,25 @@ const Reset: any = createGlobalStyle`
       text-decoration: none;
       color: inherit;
     }
-    .container__Grid-sc-0-1.hDnPWx {
-      gap: 24px;
-      grid-template-columns: repeat(auto-fill,minmax(228px,1fr));
-      margin-bottom: 8px;
+    .container__Grid-sc-0-1 {
+      gap: 24px !important;
+      grid-template-columns: repeat(auto-fill,minmax(228px,1fr)) !important;
+      margin-bottom: 8px !important;
     }
-    .container__Grid-sc-0-1.ffFLHk {
-      grid-template-columns: repeat(auto-fill,minmax(287px,1fr));
-    }
-    .navigation__Wrapper-sc-0-0 {
-      border: none;
-    }
-    .list__Title-sc-0-0.bwXMXn, .list__Title-sc-0-1.fdwVbr  {
-      background: transparent;
-      padding: 0;
-      color: ${colors.main[70]};
-      margin-bottom: 18px;
-      font-weight: 700;
+    .list__Title-sc-0-0, .list__Title-sc-0-1  {
+      background: transparent !important;
+      padding: 0 !important;
+      color: ${colors.main[70]} !important;
+      margin-bottom: 18px !important;
+      font-weight: 700 !important;
     }
     .grid__Grid-sc-0-8, .grid__Grid-sc-0-6 {
       text-align: center;
     }
-    .grid__Name-sc-0-4.GPyTh, .grid__Name-sc-0-3 {
-      color: ${colors.main[70]};
-      font-weight: 700;
-      margin-top: 8px;
+    .grid__Name-sc-0-4, .grid__Name-sc-0-3 {
+      color: ${colors.main[70]} !important;
+      font-weight: 700 !important;
+      margin-top: 8px !important;
     }
     .grid__Booth-sc-0-6, .grid__Description-sc-0-4 {
       ${poppins.style}
@@ -58,7 +52,7 @@ const Reset: any = createGlobalStyle`
         ${poppins.style}
       }
 
-      .input__Wrapper-sc-0-4.cVTYpt {
+      .input__Wrapper-sc-0-4 {
         background-color: transparent !important;
       }
 
@@ -72,9 +66,9 @@ const Reset: any = createGlobalStyle`
     .time-preferences__Wrapper-sc-0-2 {
       display: none;
     }
-    .wrapper__Wrapper-sc-0-0.bVwHNb {
-      max-width: 1440px;
-      grid-template-columns: 432px minmax(1px,1fr);
+    .wrapper__Wrapper-sc-0-0 {
+      max-width: 1440px !important;
+      grid-template-columns: 432px minmax(1px,1fr) !important;
     }
 `;
 
