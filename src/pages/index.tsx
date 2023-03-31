@@ -58,7 +58,7 @@ function Schedule() {
           />
           Schedule
         </H3>
-        <Paragraph>
+        <Paragraph style={{ marginBottom: 26 }}>
           Experience the excitement and glamour of the fashion world with FT’S!
           Featuring top designers and stunning models, the schedule promises an
           unforgettable showcase of the latest trends and styles. From backstage
@@ -87,7 +87,7 @@ function Brands() {
           />
           Brands
         </H3>
-        <Paragraph>
+        <Paragraph style={{ marginBottom: 26 }}>
           FT’S has produced a runway that celebrates multiculturalism and
           emerging talent. We strive to identify undiscovered designers by
           providing an accessible and widely reputable platform. Through
@@ -106,6 +106,7 @@ function Brands() {
 
 const Center = styled.div`
   text-align: center;
+  margin-bottom: 80px;
 `;
 
 function Speakers() {
@@ -121,7 +122,7 @@ function Speakers() {
         />
         Speakers
       </H3>
-      <Paragraph>
+      <Paragraph style={{ margin: "0 auto" }}>
         From designers and stylists to sustainability experts and social
         influencers, our diverse and dynamic speakers will provide a wealth of
         knowledge & inspiration.
@@ -143,12 +144,15 @@ function Showroom() {
         />
         Showroom
       </H3>
-      <Paragraph>
+      <Paragraph style={{ margin: "0 auto 26px" }}>
         Be the first to witness the unveiling of the hottest new pieces in
         fashion! FT’S will showcase the latest trends and styles, featuring
         innovative designs and stunning collections that will leave you
         breathless.
       </Paragraph>
+      <Link href="/products?categoryId=UHJvZHVjdENhdGVnb3J5XzM2NQ==">
+        <Button>Explore the showroom</Button>
+      </Link>
     </Center>
   );
 }

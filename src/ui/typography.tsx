@@ -6,11 +6,8 @@ export const Paragraph = styled.p`
   ${poppins.style};
   font-size: 16px;
   line-height: 150%;
-  margin-bottom: 26px;
   color: ${colors.text};
   max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 export const H3 = styled.h3`
@@ -19,4 +16,11 @@ export const H3 = styled.h3`
   line-height: 150%;
   font-weight: 700;
   margin-bottom: 16px;
+`;
+
+export const H1 = styled.h1`
+  color: ${colors.main[100]};
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 115%;
 `;
