@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const COLORS = ["blue", "red", "green", "yellow", "purple"];
+const COLORS = ["blue", "red", "green", "orange", "purple"];
 
 export default function handle(req: NextApiRequest, res: NextApiResponse) {
   const index = Number(req.query.colorId) - 1;
