@@ -571,10 +571,10 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.4.tgz#0c8b74c50f29ee44f423f7416829c0bf8bb5eb27"
   integrity sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA==
 
-"@swapcard/react-sdk@^2.7.0":
-  version "2.9.3"
-  resolved "https://registry.yarnpkg.com/@swapcard/react-sdk/-/react-sdk-2.9.3.tgz#2897380be9db7960f27217e918ecc05b389e4802"
-  integrity sha512-GtmmNESNqJq4NWuD1rurbVS2soPeyMi1hNmR6EnSmA5ZPgW7TB3wIAhUdlXaNqQXQyUxyrZgEE4qOY1V2glCGw==
+"@swapcard/react-sdk@^2.10.4":
+  version "2.10.4"
+  resolved "https://registry.yarnpkg.com/@swapcard/react-sdk/-/react-sdk-2.10.4.tgz#84d5c858a30cec632156f465ccb62dfd7db50ae2"
+  integrity sha512-7Cl7WfiC/5/LzDnC1JE0RWEHGxbF7GYEoJ2FwD9NO8h9OZip6VsMGEbIO/cEZqP90CKmfo1wj/IsMRGrwFDb8g==
   dependencies:
     "@apollo/react-common" "^3.1.3"
     "@apollo/react-hooks" "^3.1.3"
@@ -599,7 +599,6 @@
     compressorjs "^1.0.5"
     countries-list "^2.6.1"
     dayjs "^1.8.25"
-    dottie "^2.0.1"
     draft-js "^0.11.0"
     draft-js-export-html "^1.4.1"
     escape-html "^1.0.3"
@@ -1726,11 +1725,6 @@ domutils@^3.0.1:
     dom-serializer "^2.0.0"
     domelementtype "^2.3.0"
     domhandler "^5.0.1"
-
-dottie@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/dottie/-/dottie-2.0.2.tgz#cc91c0726ce3a054ebf11c55fbc92a7f266dd154"
-  integrity sha512-fmrwR04lsniq/uSr8yikThDTrM7epXHBAAjH9TbeH3rEA8tdCO7mRzB9hdmdGyJCxF8KERo9CITcm3kGuoyMhg==
 
 draft-js-export-html@^1.4.1:
   version "1.4.1"
