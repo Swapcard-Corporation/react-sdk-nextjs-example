@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@swapcard/react-sdk": "^2.10.4",
+    "@swapcard/react-sdk": "^2.13.12",
     "next": "^13.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
