@@ -2,6 +2,7 @@ import { H1, Paragraph } from "@/ui/typography";
 import {
   ExhibitorEventListView,
   getExhibitorEventListView,
+  EventFilterInput,
 } from "@swapcard/react-sdk/lib/exhibitor/event-list-view";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,8 +19,8 @@ const Heading = styled.header`
 `;
 
 function Exhibitors() {
-  const [search, setSearch] = useState();
-  const [filters, setFilters] = useState();
+  const [search, setSearch] = useState<string>();
+  const [filters, setFilters] = useState<EventFilterInput[]>();
   return (
     <>
       <Head>

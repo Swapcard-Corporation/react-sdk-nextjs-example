@@ -97,7 +97,7 @@ MyEventWebsiteApp.getInitialProps = async (appContext: any) => {
     initialState = getClientState(client);
 
     initialScreenWidth = getScreenWidthFromUserAgent(
-      appContext.ctx.req.headers["user-agent"]
+      appContext.ctx.req.headers["user-agent"],
     );
 
     appContext.ctx.client = client;

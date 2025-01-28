@@ -7,7 +7,7 @@ function Exhibitor() {
   return (
     <div style={{ marginTop: 100 }}>
       <ExhibitorEventDetails
-        exhibitorId={router.query.exhibitorId}
+        exhibitorId={router.query.exhibitorId as string}
         stickyOffset={84}
         renderProductCard={(node, product) => (
           <Link href={`/product/${product.id}`}>{node}</Link>

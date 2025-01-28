@@ -1,14 +1,15 @@
 import {
   PlanningEventListView,
   getPlanningEventListView,
+  EventFilterInput,
 } from "@swapcard/react-sdk/lib/planning/event-list-view";
 import Link from "next/link";
 import { useState } from "react";
 
 function Agenda() {
-  const [search, setSearch] = useState();
-  const [filters, setFilters] = useState();
-  const [aggregationId, setAggregationId] = useState();
+  const [search, setSearch] = useState<string>();
+  const [filters, setFilters] = useState<EventFilterInput[]>();
+  const [aggregationId, setAggregationId] = useState<string>();
   return (
     <PlanningEventListView
       viewId={process.env.NEXT_PUBLIC_PLANNING_VIEW_ID}
@@ -22,6 +23,7 @@ function Agenda() {
       renderPlanningCard={(node, planning) => (
         <Link href={`/planning/${planning.id}`}>{node}</Link>
       )}
+      eventPlanningDetailsProps={{}}
     />
   );
 }

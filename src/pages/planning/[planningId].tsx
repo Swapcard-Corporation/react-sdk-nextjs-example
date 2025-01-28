@@ -7,7 +7,7 @@ function Planning() {
   return (
     <div style={{ marginTop: 100 }}>
       <PlanningEventDetails
-        planningId={router.query.planningId}
+        planningId={router.query.planningId as string}
         desktopOffset={84}
         renderExhibitorCard={(node, exhibitor) => (
           <Link href={`/exhibitor/${exhibitor.id}`}>{node}</Link>

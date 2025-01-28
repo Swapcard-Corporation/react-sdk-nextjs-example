@@ -1,6 +1,7 @@
 import {
   ProductEventListView,
   getProductEventListView,
+  EventFilterInput,
 } from "@swapcard/react-sdk/lib/product/event-list-view";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,8 +9,8 @@ import { useState } from "react";
 import Head from "next/head";
 
 function Products() {
-  const [search, setSearch] = useState();
-  const [filters, setFilters] = useState();
+  const [search, setSearch] = useState<string>();
+  const [filters, setFilters] = useState<EventFilterInput[]>();
   const router = useRouter();
   const { categoryId } = router.query;
   return (
@@ -17,7 +18,7 @@ function Products() {
       viewId={process.env.NEXT_PUBLIC_PRODUCT_VIEW_ID}
       search={search}
       stickyOffset={84}
-      categoryId={categoryId}
+      categoryId={categoryId as string}
       selectedFilters={filters}
       mobileFiltersMode="SWIPE_BOTTOM_MODAL"
       onSearch={setSearch}

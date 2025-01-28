@@ -7,11 +7,12 @@ function Product() {
   return (
     <div style={{ marginTop: 100 }}>
       <ProductEventDetails
-        productId={router.query.productId}
+        productId={router.query.productId as string}
         stickyOffset={84}
         renderExhibitorCard={(node, exhibitor) => (
           <Link href={`/exhibitor/${exhibitor.id}`}>{node}</Link>
         )}
+        onBack={router.back}
         onClickOnBookmarkButton={() =>
           window.open("https://swapcard.com", "_blank")
         }
